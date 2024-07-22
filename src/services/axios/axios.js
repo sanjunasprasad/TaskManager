@@ -37,7 +37,7 @@ import { apiURl } from '../../utils/constants';
 function createAxiosInstance(token) {
     const instance = axios.create({
         baseURL: apiURl,
-        withCredentials: true, 
+        // withCredentials: true, 
     });
 
     if (token) {
