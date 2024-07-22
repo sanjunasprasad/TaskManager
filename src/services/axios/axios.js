@@ -32,11 +32,11 @@
 
 
 import axios from 'axios';
-import { apiURL } from '../../utils/constants';
+import { apiURl } from '../../utils/constants';
 
 function createAxiosInstance(token) {
     const instance = axios.create({
-        baseURL: apiURL,
+        baseURL: apiURl,
         withCredentials: true, 
     });
 
