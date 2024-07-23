@@ -4,7 +4,7 @@ import Card from '../components/Card';
 import Modal from '../components/Modal';
 import EditModal from "../components/EditModal"
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
-import { axiosInstance } from '../services/axios/axios';
+import { axiosUserInstance } from '../services/axios/axios';
 import Swal from "sweetalert2"
 import 'sweetalert2/dist/sweetalert2.min.css'
 
@@ -23,7 +23,7 @@ const TodoList = () => {
       const user = JSON.parse(localStorage.getItem('user'));
       const userId = user._id;
       try {
-        const response = await axiosInstance.get(`/getTodo/${userId}`);
+        const response = await axiosUserInstance.get(`/getTodo/${userId}`);
         setTodos(response.data);
       } catch (error) {
         console.error('Error fetching todos:', error);
@@ -46,7 +46,7 @@ const TodoList = () => {
       userId: userId
     };
     try {
-      const response = await axiosInstance.post('/addTodo', newTodo);
+      const response = await axiosUserInstance.post('/addTodo', newTodo);
       // console.log("response",response.data)
       // console.log("Todos before adding:", todos);
       // console.log("Todos after adding:", [...todos, response.data]);
@@ -89,7 +89,7 @@ const TodoList = () => {
 const handleEditTodo = async (updatedTodo) => {
   // console.log("updated todo",updatedTodo)
   try {
-    await axiosInstance.put(`/updateTodo/${updatedTodo._id}`, updatedTodo);
+    await axiosUserInstance.put(`/updateTodo/${updatedTodo._id}`, updatedTodo);
     setTodos(todos.map(todo => (todo.id === updatedTodo.id ? updatedTodo : todo)));
     const Toast = Swal.mixin({
       toast: true,

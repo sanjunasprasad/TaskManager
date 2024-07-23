@@ -1,5 +1,5 @@
 import React from 'react';
-import { axiosInstance } from '../services/axios/axios';
+import { axiosUserInstance } from '../services/axios/axios';
 import Swal from "sweetalert2"
 import 'sweetalert2/dist/sweetalert2.min.css'
 
@@ -18,7 +18,7 @@ const TodoItem = ({ id, description,status, createdAt, onDelete  , onEdit }) => 
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          const response = await axiosInstance.delete(`/deleteTodo/${id}`);
+          const response = await axiosUserInstance.delete(`/deleteTodo/${id}`);
           // console.log("Delete response", response);
           Swal.fire({
             title: "Deleted!",
