@@ -1,70 +1,128 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Task Manager App
 
-## Available Scripts
+This task management application allows users to create, update, and manage tasks within different columns with drag-and-drop functionality. It includes user authentication with email and Google login, and ensures that all tasks have server-side validation. The application features a clean, intuitive user interface built with React, and a robust back end using Node.js and Express, with data stored in a MongoDB database. Additionally, it includes error handling and basic security measures.
 
-In the project directory, you can run:
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Login Page:
+  Form for user login.
+  Option for Google login.
+- Sign Up Page:
+  Form for user registration.
+- Dashboard:
+  Display columns and tasks.
+  Drag-and-drop interface for moving tasks between columns.
+  Buttons for creating new tasks .
+- Task Details Modal:
+  Display and edit task details.
+  Options to update or delete tasks.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Deployment
 
-### `npm run build`
+- Deployment of frontend: Vercel
+- Deployment of backend: AWS ec2
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Server developement tools,libraries and technologies used
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Node.js and express.js
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+MongoDB and mongoose (Database and Schema modeling)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+CORS (To securely communicate with resources from other domain)
 
-## Learn More
+JWT (JSON Web Token) Facilitates secure authentication by encoding user information in a token that can be verified and trusted, allowing for stateless and scalable authentication processes.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+RESTful API handling CRUD operations for tasks.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Error Handling Middlewares - Handle and control the errors more efficiently.
 
-### Code Splitting
+Auth Middlewares - Enhance security by verifying user authentication and authorization before allowing access to specific routes or resources.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+MVC Architecture Divides software into Model (data), View (user interface), and Controller (logic) components to enhance modularity and maintainability in application development.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+### Client developement tools,libraries and technologies used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+React + Create-reat-app
 
-### Advanced Configuration
+Tailwind CSS
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Drag-and-drop functionality using react-beautiful-dnd.
 
-### Deployment
+Formik and Yup: Leveraged for form handling and validation, improving user input control and data integrity.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Sweetalert-(For showing pop-ups , custom messages to the user.)
 
-### `npm run build` fails to minify
+axiosInstance -Improved, efficienct and reliable in fetching data from APIs
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+### Optimization Techniques Used
+
+Component Separation: Enhances reusability and facilitates easier loading by breaking down components into smaller, manageable pieces.
+
+Protected Routes: Ensures that only authenticated users can access certain parts of the application, improving security and user experience by preventing unauthorized access to sensitive information or functionality.
+
+
+## Installation of frontend and backend using git clone
+step 1.clone project from github by using following link 
+- frontend: 
+git clone https://github.com/sanjunasprasad/TaskManager_frontend.git
+- backend: 
+git clone https://github.com/sanjunasprasad/TaskManager_backend.git
+
+step 2.In the project directory terminal, Install dependencies using :
+Front-End
+cd client
+npm install
+
+Back-End
+cd server
+npm install
+
+stpe 3.
+Start the development server using `npm start`
+
+
+
+
+
+## Installation via github repository file download
+step 1. download project via this link:
+frontend:
+https://github.com/sanjunasprasad/TaskManager_frontend
+backend:
+https://github.com/sanjunasprasad/TaskManager_backend
+
+
+step 2. unzip the file, and  open project in vs code.
+Backend and frontend are in seperate folders
+  
+step 3. Install dependencies using npm install
+In the project directory terminal, you can run: 
+cd server
+`npm install`
+`npm start`
+
+step 4. In the project directory terminal, you can run: 
+cd client
+`npm install`
+`npm start`
+
+step 5. by following all these steps , site will be running  locally in your machine
+
+
+## Active Link
+https://task-manager-pink-six.vercel.app/
+    
+
